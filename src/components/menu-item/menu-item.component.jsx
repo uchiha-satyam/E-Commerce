@@ -1,10 +1,31 @@
 import React from 'react';
+import {
+	useLocation,
+	useNavigate,
+	useParams,
+} from "react-router-dom";
+import './menu-item.styles.scss';
 
-import './menu-item.styles.scss'
+function withRouter(Component) {
+	function ComponentWithRouterProp(props) {
+		let location = useLocation();
+		let navigate = useNavigate();
+		let params = useParams();
+		return (
+			<Component
+				{...props}
+				router={{ location, navigate, params }}
+			/>
+		);
+	}
 
-const MenuItem = ({title, imageUrl, size}) => (
+	return ComponentWithRouterProp;
+}
+
+const MenuItem = ({ title, imageUrl, size, router, linkUrl }) => (
 	<div
 		className={`menu-item ${size}`}
+		onClick={() => router.navigate(`${linkUrl}`)}
 	>
 		<div
 			style={{
@@ -19,4 +40,4 @@ const MenuItem = ({title, imageUrl, size}) => (
 	</div>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);
