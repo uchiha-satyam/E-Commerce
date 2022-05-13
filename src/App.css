@@ -8,24 +8,28 @@ a {
   color: black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgb(0, 255, 191) rgba(255, 255, 255, 0);
+    scrollbar-color: #c7ff64 rgba(0, 0, 0, 0.5);
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
   }
 
   *::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 255, 191);
+    background-color: #c7ff64;
     border-radius: 5px;
     border: 0px none #ffffff;
 }
