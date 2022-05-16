@@ -25,3 +25,13 @@
     }
   }
 }
+
+.photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 3px solid #c7ff64;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

@@ -24,6 +24,16 @@ const Header = ({ currentUser }) => (
 				<Link className="option" to='/sign'>SIGN IN</Link>
 			}
 		</div>
+		{
+			(currentUser!=null&&currentUser.photoURL!=null)?
+			<div
+				className="photo"
+				style={{
+					backgroundImage: `url(${currentUser.photoURL})`
+				}}
+			></div>
+			:null
+		}
 	</div>
 )
 
