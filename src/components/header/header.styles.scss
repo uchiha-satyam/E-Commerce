@@ -17,7 +17,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     .option {
       padding: 10px 15px;
@@ -34,4 +34,5 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
 }
