@@ -16,20 +16,20 @@ a {
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #c7ff64 rgba(0, 0, 0, 0);
+    scrollbar-color: #c7ff64 darkgrey;
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 7px;
+    width: 8px;
   }
 
   *::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
+    background: darkgrey;
+    border-radius: 5px;
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #c7ff64;
     border-radius: 5px;
-    border: 0px none #ffffff;
 }
