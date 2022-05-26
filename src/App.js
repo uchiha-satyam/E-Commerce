@@ -52,7 +52,13 @@ class App extends React.Component {
               <SignInAndSignUpPage />
             )
           } />
-          <Route path='/checkout' element={<CheckoutPage />} />
+          <Route path='/checkout' element={
+            this.props.currentUser ? (
+              <CheckoutPage />
+            ) : (
+              <Navigate to='/' replace />
+            )
+          } />
         </Routes>
       </div>
     )
