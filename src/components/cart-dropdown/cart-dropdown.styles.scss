@@ -14,14 +14,24 @@
     right: -8px;
     z-index: 5;
 
+	.empty-message {
+		display: flex;
+		text-align: center;
+		font-family: 'Barlow Condensed', sans-serif;
+		font-size: 20px;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.cart-items {
-		height: 260px;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		overflow: auto;
 	}
 
 	button {
-		margin-top: auto;
+		margin-top: 16px;
 	}
 }
