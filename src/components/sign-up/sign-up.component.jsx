@@ -1,10 +1,10 @@
 import React from 'react';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, firestore } from '../../firebase/firebase.utils';
-import { doc, setDoc } from 'firebase/firestore';
 import './sign-up.styles.scss';
 
 class SignUp extends React.Component {
