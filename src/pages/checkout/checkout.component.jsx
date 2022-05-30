@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
-import RazorpayCheckoutButton from '../../components/razorpay-button/razorpay-button.component';
+import ShippingForm from '../../components/shipping-form/shipping-form.component';
 import { selectCartItems, selectCartAmount } from '../../redux/cart/cart.selectors';
 import './checkout.styles.scss';
 
@@ -33,7 +33,7 @@ const CheckoutPage = ({ cartItems, amount }) => (
 			<span>To Pay : ₹ {amount}</span>
 		</div>
 		{
-			amount ? <RazorpayCheckoutButton price={amount} /> : null
+			amount ? <ShippingForm price={amount} /> : null
 		}
 		<div className="test-warning">
 			*Please use the following TEST CARDS for payment*
