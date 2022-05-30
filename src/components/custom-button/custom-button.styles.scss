@@ -1,5 +1,6 @@
 $google-blue: #4285f4;
 $darker-google-blue: #357ae8;
+$theme-color: #c7ff64;
 
 .custom-button {
   min-width: 165px;
@@ -47,6 +48,19 @@ $darker-google-blue: #357ae8;
       background-color: black;
       color: white;
       border: none;
+    }
+  }
+
+  &.payment {    
+    color: white;
+    background-color: black;
+    border: none;
+    
+    &:hover {
+      color: black;
+      background-color: $theme-color;
+      padding: 0 10px;
+      border: 1px solid lightgray;
     }
   }
 }

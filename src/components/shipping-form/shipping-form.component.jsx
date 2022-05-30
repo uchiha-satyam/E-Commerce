@@ -129,7 +129,7 @@ class ShippingForm extends React.Component {
 						label='Country'
 						required
 					/>
-					<CustomButton type='submit'>Pay Now</CustomButton>
+					<CustomButton type='submit' isPayment>Pay Now</CustomButton>
 				</form>
 			</div>
 		)
