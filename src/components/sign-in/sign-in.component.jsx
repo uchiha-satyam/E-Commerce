@@ -4,8 +4,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import { signInWithGoogle, auth } from '../../firebase/firebase.utils';
-import { ReactComponent as G } from '../../assets/G.svg';
-import './sign-in.styles.scss';
+import { SignInContainer, ButtonContainer, GLogo, SignWithGContainer, Title } from './sign-in.styles';
 
 class SignIn extends React.Component {
 	constructor(props) {
@@ -37,8 +36,8 @@ class SignIn extends React.Component {
 
 	render() {
 		return (
-			<div className="sign-in">
-				<h2 className="title">I already have an account</h2>
+			<SignInContainer>
+				<Title>I already have an account</Title>
 				<span>Sign in with your email and password</span>
 
 				<form onSubmit={this.handleSubmit}>
@@ -58,17 +57,17 @@ class SignIn extends React.Component {
 						handleChange={this.handleChange}
 						required
 					/>
-					<div className="buttons">
+					<ButtonContainer>
 						<CustomButton type="submit">Sign In</CustomButton>
 						<CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>
-							<div className="sign-with-G">
-								<G className="G" />&nbsp;&nbsp;
+							<SignWithGContainer>
+								<GLogo/>&nbsp;&nbsp;
 								<span>Sign In</span>
-							</div>
+							</SignWithGContainer>
 						</CustomButton>
-					</div>
+					</ButtonContainer>
 				</form>
-			</div>
+			</SignInContainer>
 		)
 	}
 }

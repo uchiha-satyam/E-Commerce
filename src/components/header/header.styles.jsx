@@ -1,32 +1,35 @@
-.header {
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+export const HeaderContainer = styled.div`
   height: max-content;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
+`;
 
-  .logo-container {
+export const LogoContainer = styled(Link)`
     // height: 100%;
     width: 140px;
     padding: 25px;
-  }
+`;
 
-  .options {
+export const OptionsContainer = styled.div`
     // width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+`;
 
-    .option {
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-  }
-}
+export const OptionLink = styled(Link)`
+	padding: 10px 15px;
+	cursor: pointer;
+`;
 
-.photo {
+export const PhotoContainer = styled.div`
   width: 84px;
   height: 84px;
   border-radius: 50%;
@@ -35,4 +38,4 @@
   background-position: center;
   background-size: cover;
   position: relative;
-}
+`;

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import { setShippingAddress } from '../../redux/shipping/shipping.actions';
-import './shipping-form.styles.scss';
+import { ShippingContainer, TitleContainer } from './shipping-form.styles'
 
 class ShippingForm extends React.Component {
 	constructor(props) {
@@ -85,8 +85,8 @@ class ShippingForm extends React.Component {
 		}
 
 		return (
-			<div className="shipping">
-				<h2 className="title">Deliver To :</h2>
+			<ShippingContainer>
+				<TitleContainer>Deliver To :</TitleContainer>
 				<span>Enter your shipping address</span>
 				<form className="shipping-form" onSubmit={handleSubmit} >
 					<FormInput
@@ -131,7 +131,7 @@ class ShippingForm extends React.Component {
 					/>
 					<CustomButton type='submit' isPayment>Pay Now</CustomButton>
 				</form>
-			</div>
+			</ShippingContainer>
 		)
 	}
 }
