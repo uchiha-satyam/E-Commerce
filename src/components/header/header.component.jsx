@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { auth } from '../../firebase/firebase.utils';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
+import Logo from '../../assets/logo.png';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
@@ -13,7 +13,7 @@ import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, PhotoCont
 const Header = ({ currentUser, hidden }) => (
 	<HeaderContainer>
 		<LogoContainer to='/'>
-			<Logo className='logo' />
+			<img src={Logo} className='logo' alt='Logo' />
 		</LogoContainer>
 		<OptionsContainer>
 			<OptionLink to='/shop'>
