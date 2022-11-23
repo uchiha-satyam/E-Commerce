@@ -16,7 +16,7 @@ export const LogoContainer = styled(Link)`
     padding: 25px;
 
     & img {
-      width: 140px;
+      width: 8vw;
     }
 `;
 
